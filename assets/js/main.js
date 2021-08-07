@@ -22,6 +22,17 @@ import {Leon, Lobo, Oso, Serpiente, Aguila} from "./animal.js"
         console.log(nombreElegidoHTML)
     })
     btnRegisterPreview.addEventListener("click", () => {
+        //if(nombreElegidoHTML === "Seleccione un animal") {
+        //    const nombreError = document.querySelector("#nombreError")
+        //    nombreError.innerHTML = "Porfavor seleccione un animal"
+        //} else if(edadElegidaHTML === "Seleccione un rango de años") {
+        //    const edadError = document.querySelector("#edadError")
+        //    edadError.innerHTML = "Porfavor seleccione un rango de edad"
+        //} else if(comentariosAnimalHTML == undefined) {
+        //    const comentariosError = document.querySelector("#comentariosError")
+        //    comentariosError.innerHTML = "Porfavor escriba algún comentario"
+        //} else
+        //
         const nombreElegidoHTML = document.querySelector("#animal option:checked").value
         const edadElegidaHTML = document.querySelector("#edad option:checked").value
         const comentariosAnimalHTML = document.querySelector("#comentarios").value
