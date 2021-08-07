@@ -7,7 +7,7 @@ import {Animal} from "./classes.js"
         super(...args)
     }
     rugir() {
-
+        this.playSound()
     }
 }
 
@@ -16,7 +16,7 @@ export class Lobo extends Animal {
         super(...args)
     }
     aullar() {
-
+        this.playSound()
     }
 }
 
@@ -25,7 +25,7 @@ export class Oso extends Animal {
         super(...args)
     }
     grunir() {
-
+        this.playSound()
     }
 }
 
@@ -34,7 +34,7 @@ export class Serpiente extends Animal {
         super(...args) 
     }
     sisear() {
-
+        this.playSound()
     }
 }
 
@@ -43,6 +43,6 @@ export class Aguila extends Animal {
         super(...args)
     }
     chillar() {
-
+        this.playSound()
     }
 }

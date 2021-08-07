@@ -1,36 +1,33 @@
 "use strict"
 
  export class Animal {
-    constructor(nombre, edad, img, comentarios, sonido) {
+    constructor(nombre, edad, comentarios, img, sonido) {
         this._nombre = nombre
         this._edad = edad
-        this._img = img
         this._comentarios = comentarios
+        this._img = img
         this._sonido = sonido
     }
     get nombre() {
-        this._nombre
+        return this._nombre
     }
     get edad() {
-        this._edad
-    }
-    get img() {
-        this._img
+        return this._edad
     }
     set comentarios(newComentarios) {
-        this._comentarios = newComentarios
+        return this._comentarios = newComentarios
+    }
+    get img() {
+        return this._img
     }
     get sonido() {
-        this._sonido
+        return this._sonido
+    }
+
+    playSound() {
+        const player = document.querySelector("#player")
+        player.setAttribute(`src`, `/assets/sounds/${this._sonido}`)
+        player.load()
+        player.play()
     }
 }
-
-
-// const boton = document.querySelector("#btnRegistrar")
-// 
-// boton.addEventListener("click",() => {
-//     const optionAnimal = document.querySelector("#animal option:checked").value
-//     console.log(optionAnimal)
-// })
-// 
-
