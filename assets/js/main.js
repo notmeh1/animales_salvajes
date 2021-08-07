@@ -65,7 +65,22 @@ import {Leon, Lobo, Oso, Serpiente, Aguila} from "./animal.js"
             containerDiv.classList.add("card", "bg-secondary", "text-white", "mx-2", "mb-1", "custom")
 
                 img.setAttribute(`src`, `/assets/imgs/${animal.img}`)
-                console.log(animal.comentarios)
+                console.log(animal._comentarios)
+
+                img.addEventListener("click", () => {
+                    $("#exampleModal").modal("show");
+
+                    const modalBodyElement = document.querySelector("#exampleModal .modal-body");
+            
+                    modalBodyElement.innerHTML = `
+                      <img src="/assets/imgs/${animal.img}" style="max-width: 300px" class="mx-auto"/>
+                      <ul class="text-white text-center list-unstyled">
+                        <li>Nombre: ${animal.nombre}</li>
+                        <li>Edad: ${animal.edad}</li>
+                        <li>Comentarios: ${animal._comentarios}</li>
+                      </ul>
+                    `;
+                })
 
                 cardButtonDiv.classList.add("card-footer")
                 cardButtonDiv.innerHTML = `

@@ -43,6 +43,7 @@ body {
 
 .custom {
   width: 300px;
+  cursor: pointer;
 }
 
 /* Modal */
